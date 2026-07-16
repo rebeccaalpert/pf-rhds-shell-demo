@@ -1,0 +1,61 @@
+html,
+body,
+#root {
+  padding: 0;
+  margin: 0;
+}
+
+.hb-universal-header {
+  position: sticky;
+  top: 0;
+  z-index: 400;
+}
+
+.hb-site-footer {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  background-color: light-dark(#f2f2f2, #1f1f1f);
+  border-block-start: 1px solid var(--pf-t--global--border--color--default);
+}
+
+.hb-site-footer__site-name {
+  font-weight: 700;
+}
+
+.hb-inline-menu-dropdown {
+  position: relative;
+}
+
+.hb-inline-menu-dropdown__menu {
+  position: absolute;
+  left: 0;
+  z-index: 500;
+  box-shadow: var(--pf-t--global--box-shadow--md);
+  border-radius: var(--pf-t--global--border--radius--default);
+  white-space: nowrap;
+}
+
+.hb-inline-menu-dropdown--above .hb-inline-menu-dropdown__menu {
+  bottom: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.hb-v1-theme .pf-v6-c-page,
+.hb-v1-theme .pf-v6-c-page__main,
+.hb-v1-theme .pf-v6-c-page__main-container {
+  background: none;
+}
+
+.hb-v1-theme .pf-v6-c-drawer__panel {
+  border-radius: var(--pf-t--global--border--radius--medium);
+  box-shadow: var(--pf-t--global--box-shadow--md);
+}
+
+.hb-demo-card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}

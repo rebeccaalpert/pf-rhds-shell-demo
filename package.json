@@ -1,0 +1,28 @@
+{
+  "name": "pf-rhds-shell-demo",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lit/react": "^1.0.8",
+    "@patternfly/patternfly": "6.6.0",
+    "@patternfly/react-core": "6.6.0",
+    "@patternfly/react-icons": "6.6.0",
+    "@rhds/elements": "^4.1.0",
+    "@rhds/tokens": "^3.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "typescript": "^6.0.0",
+    "vite": "^8.0.0"
+  }
+}
