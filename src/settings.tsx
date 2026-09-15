@@ -5,7 +5,12 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import { applyTheme, resolveTheme, type ThemeMode } from "./theme";
+import {
+  applyTheme,
+  getThemeModeFromSchemeEvent,
+  resolveTheme,
+  type ThemeMode,
+} from "./theme";
 
 type SettingsContextValue = {
   theme: ThemeMode;
@@ -33,6 +38,20 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     mq.addEventListener("change", onChange);
     return () => mq.removeEventListener("change", onChange);
   }, [theme]);
+
+  useEffect(() => {
+    const onSchemeChanged = (event: Event) => {
+      const schemeTheme = getThemeModeFromSchemeEvent(event);
+      if (!schemeTheme) return;
+
+      setTheme((currentTheme) =>
+        currentTheme === schemeTheme ? currentTheme : schemeTheme,
+      );
+    };
+
+    document.addEventListener("scheme-changed", onSchemeChanged);
+    return () => document.removeEventListener("scheme-changed", onSchemeChanged);
+  }, []);
 
   const value = useMemo(() => ({ theme, setTheme }), [theme]);
 
