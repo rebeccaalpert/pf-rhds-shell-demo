@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "@patternfly/patternfly/patternfly.css";
-import "@patternfly/patternfly/patternfly-addons.css";
+import "@patternfly/react-core/dist/styles/base.css";
 import "./app.css";
 import { App } from "./App";
 import { SettingsProvider } from "./settings";
